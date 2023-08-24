@@ -10,6 +10,7 @@ import {
 } from '@ngrx/data';
 import { TodoComponent } from './containers/todo/todo.component';
 import { MaterialModule } from '../material/material.module';
+import { TodoListComponent } from './components/todo-list/todo-list.component';
 
 export const todoRoutes: Routes = [
   {
@@ -23,7 +24,7 @@ const entityMetadata: EntityMetadataMap = {
 };
 
 @NgModule({
-  declarations: [TodoComponent],
+  declarations: [TodoComponent, TodoListComponent],
   imports: [CommonModule, MaterialModule, RouterModule.forChild(todoRoutes)],
   providers: [TodoDataService, TodoEntityService],
 })

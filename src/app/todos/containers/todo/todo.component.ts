@@ -10,14 +10,13 @@ import { Observable } from 'rxjs';
   styleUrls: ['./todo.component.scss'],
 })
 export class TodoComponent implements OnInit {
-  todos$: Observable<Todo[]> | undefined;
+  todos$: Observable<Todo[]> | null = null;
   constructor(private todoEntityService: TodoEntityService) {}
   ngOnInit(): void {
     this.todoEntityService.add({
       completed: true,
-      title: 'this is a NEW one',
+      title: 'this is a new one',
     });
     this.todos$ = this.todoEntityService.getAll();
-    this.todos$.subscribe((e) => console.log(JSON.stringify(e)));
   }
 }
