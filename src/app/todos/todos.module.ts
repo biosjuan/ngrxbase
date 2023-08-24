@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TodoComponent } from './components/todo/todo.component';
 import { RouterModule, Routes } from '@angular/router';
 import { TodoDataService } from './store/services/todo-data.servise';
 import { TodoEntityService } from './store/services/todo-entity.service';
@@ -9,6 +8,7 @@ import {
   EntityDefinitionService,
   EntityMetadataMap,
 } from '@ngrx/data';
+import { TodoComponent } from './containers/todo/todo.component';
 
 export const todoRoutes: Routes = [
   {
