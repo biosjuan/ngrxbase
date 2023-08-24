@@ -11,6 +11,7 @@ import { EntityDataModule } from '@ngrx/data';
 import { RouterState, StoreRouterConnectingModule } from '@ngrx/router-store';
 import { environment } from 'src/environments/environment';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent],
@@ -36,7 +37,7 @@ import { HttpClientModule } from '@angular/common/http';
     StoreRouterConnectingModule.forRoot({
       stateKey: 'router',
       routerState: RouterState.Minimal,
-    }),
+    }), BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
