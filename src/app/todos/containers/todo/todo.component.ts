@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { TodoHttpService } from '../../store/services/todo-http.service';
 import { TodoEntityService } from '../../store/services/todo-entity.service';
 import { Todo } from '../../models/todo';
@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
   selector: 'app-todo',
   templateUrl: './todo.component.html',
   styleUrls: ['./todo.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TodoComponent implements OnInit {
   todos$: Observable<Todo[]> | null = null;
